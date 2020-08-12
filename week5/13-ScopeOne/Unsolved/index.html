@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope Activity #1</title>
+</head>
+<body>
+  <h1>Scope Activity #1</h1>
+  <h2>✨Open the console to see the magic!✨</h2>
+
+  <script>
+
+    function outside() {
+      // what is the scope of this variable?
+      var x = 1;
+
+      // what is the scope of this function and the scope of y?
+      function inside(y) {
+
+        console.log(x + y);
+      }
+
+      return inside;
+    }
+
+    // what is happening here?
+    var insideOut = outside();
+
+    // What does this return?
+    insideOut(2);
+
+    // Uncaught ReferenceError: x is not defined.
+    // How does insideOut have access to x?
+    console.log("The value of 'x' outside 'outside()' is: " + x);
+//The scope of the variable is with the outside function, inside out the variable
+// equaling outside() the function allows it to access X because it is accessing 
+//the function, however the console log is outside of the function so it cannot 
+//access X to print concationate the string, returning an undefined value.
+  </script>
+
+</body>
+</html>
