@@ -66,21 +66,23 @@
         letter = prompt("Type 'h' to honk, 'd' to drive to work, 'w' to drive around the world, or 't' to get a tuneup.");
         if ( letter === "h"){
           car.honk()
-          reWriteStats()
-        }else if ( letter === "d"){
+          reWriteStats();
+        }else if ( letter === "d" && car.isWorking){
             car.driveToWork()
-            reWriteStats()
-        }else if ( letter === "w"){
+            reWriteStats();}
+            else if ( letter === "d" && !car.isWorking){
+              alert("Get a tuneup!")}
+        else if ( letter === "w" && car.isWorking){
           car.driveAroundWorld()
-          reWriteStats()
-          car.getTuneUp
+          reWriteStats();
+        }else if ( letter === "w" && !car.isWorking){
+        alert("Get a tuneup!")
+        }else if (letter === "t") {
+          car.getTuneUp();
+          reWriteStats();
         }
-        // TO DO: Call the different car methods
-        car.driveToWork();
-        car.driveAroundWorld();
-        car.getTuneUp();
-        car.honk();
       }
+        
 
     </script>
 

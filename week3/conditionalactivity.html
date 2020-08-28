@@ -7,21 +7,34 @@
 <body>
 
     <script type="text/javascript">
-
+    //Here we ask the user if they like steak (true or false) and store the answer in a variable
     var confirmSteak = confirm("Do you like steak?");
-
+//If the user returns true then display this
     if (confirmSteak) {
         alert("Here's a steak sandwich!");
     }
+//If the user returns false, then display this.
      else {
         alert("Here's a tofu stir-fry!");
      }
-     var confirmAge = prompt("What year were you born?")
-     var drink = confirm("Do you drink?")
-     if ((confirmAge< 1996) && (drink===true))
-     alert("Sake! Sake! Sake!")
-        else 
-        alert("No Sake for you...")
+//Asking user how old they are and accepting input in a variable
+     var birthYear = prompt("What year were you born?")
+ //Asking the user if they drink 
+     var drink = confirm("Do you drink?");
+//Return if age is greater than 21
+     if ((birthYear< 1997) && (drink===true)) {
+          alert("Sake! Sake! Sake!");
+    } 
+    //Return if the user was born after 1997
+    else if (birthYear> 1997){
+         alert("No Sake for you...");
+    }
+    //Return if age is less than 21
+    else {
+        alert("You inched by. Sake! ")
+         };
+
+   
 
 
         </script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a function that takes in a string and returns true if it's a pangram or false otherwise.
+    Pangram: a sentence that contains every letter in the alphabet.
+    Ex:
+    Input: "Watch Jeopardy, Alex Trebek's fun TV quiz game"
+    Output: true
+    Input: "Five hexing wizard bots jump quickly"
+    Output: true
+    Input: "JavaScript is the best"
+    Output: false
+
+ -->
+  <script type="text/javascript">
+    // count to see how many letters are in alpha
+    // Look at each letter in alpha
+    // compare to letter in string 
+    // see if alpha is in stringif alpha is not in string stop 
+var alpha = "qwertyuiopasdfghjklzxcybnm"
+
+var allLetters = function(str) {
+    if(str.length < 26) {
+        return  false;
+    }else
+  {
+      str = str.toLowerCase();
+      for(var i = 0; i < alpha.length; i ++){
+          if (!str.includes(alpha[i])){
+              return false; 
+          }else{
+               return true;
+          }
+      }
+  }
+}
+console.log("this is the trebek one", allLetters("Watch Jeopardy, Alex Trebeks fun TV quiz game"))
+console.log("this is the javascript one", allLetters("JavaScript is the best!"))
+    </script>
+    
+</body>
+</html>

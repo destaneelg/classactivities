@@ -2,10 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <!-- steps
+    what do i need?
+    variables to hold values
+    recieve user input
+    computer makes a choice
+How does it play
+user chooses a move and computer chooses a move
+game must evaluate a winner
+    Rock beats scissors
+    scissors beats paper
+    paper beats rock   -->
+
     
+    <script type="text/javascript">
+var wins = 0;
+var ties = 0;
+var losses = 0;
+var computerInput = ["r", "p", "s"];
+//This takes the user input for the amount of games played which is set at 5
+ for(var i = 0; i < 5; i++)
+ {
+     var userInput = prompt("Please enter R for rock, P for paper, or S for scissors")
+     userInput = userInput.toLocaleLowerCase()
+    
+    var computerChoice = computerInput[Math.floor(Math.random() * computerInput.length)];
+   
+    if (userInput === "r" || userInput === "p" || userInput === "s") {
+        alert("You chose : " + userInput + " The computer chose: " + computerChoice);
+        
+        if ((userInput === "r" && computerChoice === "s") ||
+            (userInput === "p" && computerChoice === "r") || 
+            (userInput === "s" && computerChoice === "p")) {
+          wins++
+            alert("You have won " + wins + " games.");
+         } else if (userInput === computerChoice){
+            ties++
+            alert("You have tied " + ties + " games.");
+         } else {
+            losses++
+             alert("You have lost " + losses + " games.");
+         }
+        }
+    }
+    if (wins > lossses) {
+        alert("You win!")
+    } else {
+        alert("You lose!")
+    }
+     
+
+    </script>
 </body>
 </html>
